@@ -125,12 +125,7 @@ console.log(arr) //["a","b","c","d"]
  console.log(newarr[4]) //{'name':'marry'}
  
  ```
- 3. 与push的区别,
- 
- 31. 返回的不同，
- 32. concat不改变原数组，push改变。
- 33. 添加数组时concat会把值取出来添加到数组后面，push不会
- 34. 利用apply可实现和concat相同效果
+ 3. 与push的区别,第一，返回的不同，第二，concat不改变原数组，push改变。第三，添加数组时concat会把值取出来添加到数组后面，push不会。第四， 利用apply可实现和concat相同效果
  ```
  var arr1 = ["ab", "aa"];
 
