@@ -1,4 +1,4 @@
-##  js中lambda的一种用法
+##  find,filter
 ```
 <!DOCTYPE html>
 <html>
