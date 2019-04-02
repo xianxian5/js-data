@@ -62,7 +62,19 @@ var cc = arr.pop()
 console.log(cc) //e
 console.log(arr) //["a","b","c","d"]
 ```
+ #### shift（）和 unshift（）
+ 1. shift（） 删除第一项，返回删除元素的值，如果是空数组，返回underfined
+ 2. unshift（） 添加到数组头部，返回新数组长度
+ ```
+ var arr = ["a","b","c"]
+	var mm = arr.unshift("d","e")
+	console.log(mm) //5
+	console.log(arr) //["d","e","a","b","c"]
+	var cc = arr.shift()
+	console.log(cc) //d
+	console.log(arr) //["e","a","b","c"]
  
+ ```
  
  
  
