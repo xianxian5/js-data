@@ -1,3 +1,20 @@
+## 数组
+### 数组创建
+```
+var arr = new Array()|| var arr = []
+```
+### 数组方法集合
+一、 数组原型方法
+1. join（）
+2. push（）和 pop（）
+ slice（）
+ 
+
+二、 从object对象继承过来的方法
+
+
+
+
 ##  find,filter
 ```
 <!DOCTYPE html>
