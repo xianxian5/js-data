@@ -146,6 +146,20 @@ console.log(arr) //["a","b","c","d"]
  console.log(arr3) //["ab", "aa",2,[3,4]] 
  ```
  
+#### slice（start,end）
+1. 不改变原来数组
+2. 返回一个新的数组包含从start开始，end结束（不包含）
+3. end是可以选值，如果为空，默认到被切数组的末尾。
+4. start可以是负数，就是从末尾开始计算，如果是-1就指的最后一位
+```
+var arr1 = ["ab", "aa","cc"];
+console.log(arr1.slice(0,2))//["ab", "aa"]
+console.log(arr1) //["ab", "aa","cc"]
+
+console.log(arr1.slice(0))//["ab", "aa","cc"]
+console.log(arr1.slice(-1))//["cc"]
+```
+ 
  
  
  
