@@ -171,7 +171,24 @@ console.log(arr) //["cc","dd","cc"]
 console.log(arr1) //["aa","bb"]
 ```
 
-#### 
+#### indexOf（searchvalue,start）和 lastindexOf（searchvalue,start）
+1. searchvalue必填
+2. indexOf 中start 可选，0到数组长度之间的值从数组前面开始计算，lastindexOf中start可选，从数组后面开始计算。 
+3. 不改变原来数组
+4. indexOf 返回第一次出现的下标
+5. lastindexOf 返回最后一次出现的下标
+6. 不出现返回-1
+```
+var arr = ["aa","bb","cc","cc"]
+var nn = arr.indexOf("cc",1)
+console.log(nn) //2
+console.log(arr) //["aa","bb","cc","cc"]
+var nn1 = arr.lastIndexOf("cc",4)
+console.log(nn1) //3
+
+```
+
+#### foreach
 
  
  
