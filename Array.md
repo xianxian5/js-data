@@ -188,41 +188,122 @@ console.log(nn1) //3
 
 ```
 
-#### foreach
+#### foreach（(n,i,arr)=>{}）
+1. 对数组进行遍历循环，执行函数
+2. 没有返回值
+3. n每项的值，i下标，arr循环的数组
+```
+ var arr = ["aa","bb","cc"]
+ arr.forEach((n,i,a) => {
+	console.log(n,a)
+ })
+```
 
+#### map()
+1. 有返回值
+2. 循环执行数组里的每一想
+```
+arrEvent: function () {
+ var _this = this
+ var arr = [1,2,3]
+ var arr1 = arr.map((n) => {
+   return n*n
+ })
+ console.log(arr) //[1,2,3]
+ console.log(arr1) //[1,4,9]
+}
+```
+
+#### every()
+1.  检查所有元素，都正确返回true，有一个错误则返回false，且不再继续执行
+```
+arrEvent: function () {
+var arr = [1, 2, 3, 4, 5];
+var arr2 = arr.every((n) => {
+return n<3
+})
+console.log(arr2) //false
+}
+```
+
+#### some()
+1.  检查所有元素，有一项正确，则返回true，否则返回false
+```
+arrEvent: function () {
+var arr = [1, 2, 3, 4, 5];
+var arr2 = arr.some((n) => {
+return n<3
+})
+console.log(arr2) //true
+}
+```
+
+#### fliter（）
+1. 过滤作用，返回数组
+```
+arrEvent: function () {
+var lstVssConfigParaInfo = [{
+"strVssConfigParaName": "FILE_SERVICE_IP",
+"strVssConfigParaValue": "192.168.1.66"
+},
+{
+  "strVssConfigParaName": "FILE_SERVICE_PORT",
+  "strVssConfigParaValue": "80"
+},
+{
+  "strVssConfigParaName": "FILE_SERVICE_PORT",
+  "strVssConfigParaValue": "8080"
+}]
+
+var arr = lstVssConfigParaInfo.filter(n => {return n.strVssConfigParaName == "FILE_SERVICE_PORT"})
+
+console.log(arr)
+/*[{
+      "strVssConfigParaName": "FILE_SERVICE_PORT",
+	"strVssConfigParaValue": "80"
+    },
+{
+  "strVssConfigParaName": "FILE_SERVICE_PORT",
+  "strVssConfigParaValue": "8080"
+}]*/
+}
+
+#### find（）
+1. 过滤作用，返回单条
+```
+arrEvent: function () {
+var lstVssConfigParaInfo = [{
+"strVssConfigParaName": "FILE_SERVICE_IP",
+"strVssConfigParaValue": "192.168.1.66"
+},
+{
+  "strVssConfigParaName": "FILE_SERVICE_PORT",
+  "strVssConfigParaValue": "80"
+},
+{
+  "strVssConfigParaName": "FILE_SERVICE_PORT",
+  "strVssConfigParaValue": "8080"
+}]
+
+var arr = lstVssConfigParaInfo.find(n => {return n.strVssConfigParaName == "FILE_SERVICE_PORT"})
+
+console.log(arr)
+/*{
+      "strVssConfigParaName": "FILE_SERVICE_PORT",
+	"strVssConfigParaValue": "80"
+    }*/
+}
+```
+
+#### reduce（）//arr.reduce(function(total,currentValue, index,arr){},[initialValue])
+1. total  计算结束后返回的值
+2. currentValue 设置初始化值，如果有，那么reduce执行的次数就是arr.length，如果没有则执行的次数为arr.length-1
+3. index下标
+4. arr reduce（）执行的数组
+5. initialValue开始计算的下标，默认是1
  
  
  
  
 
 二、 从object对象继承过来的方法
-
-
-
-
-##  find,filter
-```
-<!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
-    <script>
-        var lstVssConfigParaInfo = [{
-            "strVssConfigParaName": "FILE_SERVICE_IP",
-            "strVssConfigParaValue": "192.168.1.66"
-          },
-          {
-            "strVssConfigParaName": "FILE_SERVICE_PORT",
-            "strVssConfigParaValue": "80"
-          }]
-
-          var nubip = lstVssConfigParaInfo.find(nub => nub.strVssConfigParaName == "FILE_SERVICE_IP");
-          console.log(nubip); //获取的是一条数据
-
-          var nubport = lstVssConfigParaInfo.filter(nub => nub.strVssConfigParaName == "FILE_SERVICE_PORT");
-          console.log(nubport); //获取的是一个数组
-    </script>
-</body>
-</html>
-```
