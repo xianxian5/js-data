@@ -159,6 +159,20 @@ console.log(arr1) //["ab", "aa","cc"]
 console.log(arr1.slice(0))//["ab", "aa","cc"]
 console.log(arr1.slice(-1))//["cc"]
 ```
+
+#### splice（index,howmany,item1,...,itemX）
+1. 改变原来数组
+2. 返回的是被除数的项目
+3. index、howmany 必填
+```
+var arr = ["aa","bb","cc"]
+var arr1 = arr.splice(0,2,"cc","dd")
+console.log(arr) //["cc","dd","cc"]
+console.log(arr1) //["aa","bb"]
+```
+
+#### 
+
  
  
  
