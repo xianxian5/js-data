@@ -298,7 +298,47 @@ var arr = lstVssConfigParaInfo.find(n => {return n.strVssConfigParaName == "FILE
 2. currentValue 设置初始化值，如果有，那么reduce执行的次数就是arr.length，如果没有则执行的次数为arr.length-1
 3. index下标
 4. arr reduce（）执行的数组
-5. initialValue开始计算的下标，默认是1
+5. initialValue 首位计算的值
+用法一：求和
+```
+arrEvent: function () {
+	var arr = [1,2,3,4,5]
+	var all = arr.reduce((t,c,i,arrn) => {
+	console.log(t,c,i,arrn)
+	//2 1 0 (5) [1, 2, 3, 4, 5]
+	//3 2 1 (5) [1, 2, 3, 4, 5]
+	// 5 3 2 (5) [1, 2, 3, 4, 5]
+	//8 4 3 (5) [1, 2, 3, 4, 5]
+	// 12 5 4 (5) [1, 2, 3, 4, 5]
+	return t+c
+},2)
+console.log(all) //17
+}
+```
+用法二：求积
+```
+let arr = [1,2,3,4,5]
+arr.reduce（（p,c）=> p*c）
+```
+用法三：去重
+```
+arrEvent: function () {
+let arr = ["aa","bb","ccc","aa","dd"]
+
+let newarr = arr.reduce((p,c) => {
+console.log(p,c)
+console.log(p.indexOf(c))
+if( p.indexOf(c) < 0 ){
+  return p.concat(c)
+}else{
+  return p
+}
+},[])
+console.log(newarr)  //["aa", "bb", "ccc", "dd"]
+}
+
+```
+
  
  
  
