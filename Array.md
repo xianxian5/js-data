@@ -267,9 +267,11 @@ console.log(arr)
   "strVssConfigParaValue": "8080"
 }]*/
 }
+```
 
 #### find（）
 1. 过滤作用，返回单条
+
 ```
 arrEvent: function () {
 var lstVssConfigParaInfo = [{
@@ -287,11 +289,7 @@ var lstVssConfigParaInfo = [{
 
 var arr = lstVssConfigParaInfo.find(n => {return n.strVssConfigParaName == "FILE_SERVICE_PORT"})
 
-console.log(arr)
-/*{
-      "strVssConfigParaName": "FILE_SERVICE_PORT",
-	"strVssConfigParaValue": "80"
-    }*/
+
 }
 ```
 
