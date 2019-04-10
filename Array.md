@@ -28,6 +28,7 @@ var arr = new Array()|| var arr = []
 21. entries（),keys()和valuse（）
 22. includes（）
 23. flat（）和flatMap（）
+24. 扩展运算符
 
 #### join（）
 ```
@@ -338,6 +339,9 @@ console.log(newarr)  //["aa", "bb", "ccc", "dd"]
 }
 
 ```
+
+#### 扩展运算符
+
 
  
  
