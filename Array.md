@@ -372,7 +372,15 @@ console.log(Array.from([1,2,3], (x)=> x*x)) // [1, 4, 9]
 ```
 #### Array.of() ———— 将一组值转换成数组
 ```
+arrEvent:function(){
+console.log(Array.of(0))//[0]
+function arr(){
+return [].slice.apply(arguments)
+}
 
+var mm = arr(0)
+console.log(mm)  //[0]
+}
 ```
 
  
