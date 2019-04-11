@@ -340,8 +340,40 @@ console.log(newarr)  //["aa", "bb", "ccc", "dd"]
 
 ```
 
-#### 扩展运算符
+#### 扩展运算符 -- 将数组转换成用逗号分隔的参数序列
+```
+arrEvent:function(){
+let arr = [1,2,5,6]
+console.log(...arr) //1 2 5 6
+console.log(arr) //[1,2,5,6]
+}
+```
 
+#### Array.from() ———— 将类素组和可遍历的对象转换成真的数组
+```
+1. 将类素组转换成数组
+arrEvent:function(){
+let likeArray = {
+'0': 'a',
+'1': 'b',
+'2': 'c',
+length:3
+}
+let newArr1 = Array.from(likeArray)
+console.log(newArr1) //["a", "b", "c"]
+let newArr2 = [].slice.apply(likeArray)
+console.log(newArr2) //["a", "b", "c"]
+    }
+    
+ 2. 可以接收两个参数
+arrEvent:function(){
+console.log(Array.from([1,2,3], (x)=> x*x)) // [1, 4, 9]
+}
+```
+#### Array.of() ———— 将一组值转换成数组
+```
+
+```
 
  
  
