@@ -383,6 +383,21 @@ console.log(mm)  //[0]
 }
 ```
 
+#### copywidth(target,start,end)————指定位置的成员复制到其他位置（会覆盖原有成员），然后返回当前数组
+1. -target（必需）：从该位置开始替换数据。如果为负值，表示倒数。
+2. -start（可选）：从该位置开始读取数据，默认为 0。如果为负值，表示倒数。
+3. -end（可选）：到该位置前停止读取数据，默认等于数组长度。如果为负值，表示倒数。
+```
+arrEvent:function(){
+let arr = [1,2,3,4,5]
+let newarr = arr.copyWithin(0,3,4)
+console.log(newarr)
+console.log(arr)//[4,2,3,4,5]
+}
+```
+
+
+
  
  
  
